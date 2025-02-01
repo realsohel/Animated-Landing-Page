@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --dark-bg: #222222;
+  --primary: #FF6600;
+  --secondary: #FFFFFF;
+  --orange-gradient: linear-gradient(270deg, #ff922d 0%, #ffb978 100%);
+}
+
+body {
+  /* background-color: var(--dark-bg); */
+  background-color: black;
+  color: var(--secondary);
+}
+
+.primary-text {
+  color: var(--primary);
+}
+
+.secondary-text {
+  color: var(--secondary);
+}
+
+.bg-dark {
+  background-color: var(--dark-bg);
+  /* background-color: rgba(240, 240, 240, 0.1); */
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+/* Gradient text style */
+.gradient-text {
+  background: linear-gradient(90deg, #ffffff, #c9c0c0); /* Example gradient colors */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+/* Polished text effect */
+.polished-text {
+  position: relative;
+}
+
+.polished-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: linear-gradient(90deg, #fff, transparent);
+  opacity: 0.6;
+  pointer-events: none;
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  animation: polish-effect 1.5s ease-in-out ;
+}
+
+@keyframes polish-effect {
+  0% {
+    background-position: 200% 0;
+  }
+  50% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.slide-left{
+  animation: 1.5s slide-left;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.orange-circle {
+  width: 23rem;
+  height: 23rem;
+  position: absolute;
+  background: var(--orange-gradient);
+  padding: 30px;
+  border-radius: 100%;
+  right: 0;
+  top: -25%;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+
+.slide-in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+}
+
+.slide-out{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+}
+
