@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
 const Hero = () => {
+
   return (
-    <section className="z-10 my-24 flex items-center justify-center text-center text-white ">
+    <section className="z-10 my-16 flex items-center justify-center text-center text-white ">
       
       <div className=" z-10 px-6">
       <motion.h1 
@@ -22,6 +23,7 @@ const Hero = () => {
         >
           Boost your AI application's speed and efficiency by bringing inference closer to your users. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, recusandae. Lorem ipsum dolor sit amet.
         </motion.p>
+        
         <motion.div 
           className="mt-6 flex space-x-4 justify-center"
           initial={{ opacity: 0 }}
@@ -31,8 +33,17 @@ const Hero = () => {
           <button className="cursor-pointer bg-(--primary) hover:bg-[#CC5200] px-6 py-3 rounded-lg font-semibold">
             Get Started
           </button>
-          <button className="cursor-pointer border hover:border-(--primary) border-white px-6 py-3 rounded-lg">Book a Demo</button>
+          <button className="cursor-pointer border hover:border-(--primary) border-white px-6 py-3 rounded-lg">
+            Book a Demo
+          </button>
         </motion.div>
+
+        <motion.div>
+          <img src="/landing.gif" key={Date.now()} 
+            className="z-[-1] rounded-xl w-[100%] h-[100%] object-cover"
+          />
+        </motion.div>
+
       </div>
     </section>
   );
