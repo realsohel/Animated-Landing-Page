@@ -51,7 +51,7 @@ const Navbar = () => {
             delay: 0.1, 
             ease: "easeOut",
         }}
-        className="flex text-xl polished-text justify-end items-center space-x-6 mx-auto"
+        className="flex text-md polished-text justify-end items-center space-x-6 mx-auto"
       > 
         {navItems.map((item, index) => {
           return (
@@ -68,10 +68,10 @@ const Navbar = () => {
         exit={{ opacity: 0, y:-20}}
         transition={{ duration: 1, delay: 0.5, type: 'tween'}}
       >
-        <motion.button className="z-20  text-xl cursor-pointer polished-text mx-2 bg-(--dark-bg) hover:bg-[#111111] text-white  border-grey hover:border-white rounded-3xl px-4 py-2 my-auto">
+        <motion.button className="z-20  text-md cursor-pointer polished-text mx-2 bg-(--dark-bg) hover:bg-[#111111] text-white  border-grey hover:border-white rounded-3xl px-4 py-2 my-auto">
           Contact us
         </motion.button>
-        <motion.button className="z-10 text-xl cursor-pointer polished-text mx-2  bg-(--primary) hover:bg-[#CC5200]  text-white rounded-3xl px-4 py-2 my-auto">
+        <motion.button className="z-10 text-md cursor-pointer polished-text mx-2  bg-(--primary) hover:bg-[#CC5200]  text-white rounded-3xl px-4 py-2 my-auto">
           Sign up for free
           {/* bg-gradient-to-r from-[#ffa76d] to-[#FF6600] */}
         </motion.button>
